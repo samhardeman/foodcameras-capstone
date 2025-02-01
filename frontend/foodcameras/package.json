@@ -11,9 +11,10 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "svelte": "^5.2.7",
-    "vite": "^6.0.1"
+    "vite": "^6.0.11"
   },
   "dependencies": {
+    "chart.js": "^4.4.7",
     "leaflet": "^1.9.4",
     "svelte-leaflet": "^0.2.0"
   }

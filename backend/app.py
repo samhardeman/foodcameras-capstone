@@ -2,6 +2,10 @@ from flask import Flask, jsonify, send_file
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 import os
+import threading
+import schedule
+import time
+import subprocess  # To run external scripts like CountPeople.py
 
 app = Flask(__name__)
 DB_FILE = './database/people_data.db'
@@ -24,6 +28,20 @@ def add_cors_headers(response):
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
     return response
+
+# Run CountPeople script every 15 minutes
+def run_count_people_script():
+    print("Running CountPeople script...")
+    subprocess.run(["python", "CountPeople.py"])
+
+def schedule_task():
+    schedule.every(15).minutes.do(run_count_people_script)
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+
+# Start the scheduler in a background thread
+threading.Thread(target=schedule_task, daemon=True).start()
 
 # API Routes
 @app.route('/api/locations', methods=['GET'])
@@ -73,8 +91,43 @@ def get_location(location):
         
     return jsonify(response)
 
+@app.route('/api/analytics/<location>', methods=['GET'])
+def get_analytics(location):
+    try:
+        # Fetch camera ID associated with the location
+        location_id_row = query_database("""
+            SELECT id FROM locations WHERE name = ?
+        """, (location,), one=True)
+        
+        if not location_id_row:
+            return jsonify({"error": "Location not found"}), 404
+        
+        location_id = location_id_row['id']
+
+        # Fetch the last 200 rows from the analytics table for this location
+        rows = query_database("""
+            SELECT timestamp, people_count
+            FROM analytics
+            WHERE camera_id = ?
+            ORDER BY timestamp DESC
+            LIMIT 200
+        """, (location_id,))
+        
+        response = []
+        for row in rows:
+            response.append({
+                "timestamp": row["timestamp"],
+                "people_count": row["people_count"]
+            })
+        
+        return jsonify(response)
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 if __name__ == '__main__':
     if not os.path.exists(DB_FILE):
         print("Error: Database file does not exist.")
     else:
+        run_count_people_script()
         app.run(debug=True)

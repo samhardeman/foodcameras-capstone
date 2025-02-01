@@ -11,7 +11,7 @@ from Detect import loadModel, detect
 # Load the YOLO model
 model = loadModel()
 
-# API endpoint for locations
+# API endpoints
 API_LOCATIONS_URL = "https://mkt-api.gcu.edu/linecam/api/v1/locations"
 API_IMAGES_URL = "https://mkt-api.gcu.edu/linecam/api/v1/images?includeImages=true&includeInactive=false&location="
 
@@ -49,6 +49,16 @@ def initialize_database():
             FOREIGN KEY (location_id) REFERENCES locations(id) ON DELETE CASCADE
         )
     ''')
+    # New analytics table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS analytics (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            camera_id INTEGER NOT NULL,
+            timestamp TEXT NOT NULL,
+            people_count INTEGER NOT NULL,
+            FOREIGN KEY (camera_id) REFERENCES cameras(id) ON DELETE CASCADE
+        )
+    ''')
     conn.commit()
     conn.close()
 
@@ -64,27 +74,48 @@ def fetch_camera_images(location_name):
     response.raise_for_status()
     return response.json()
 
-def add_or_update_location(longitude, latitude, name):
+def add_analytics_data(camera_id, people_count, updated_at):
     """
-    Add a new location to the database if it doesn't exist, or update it if it does.
-    Returns the location ID.
+    Insert analytics data into the database if the timestamp does not already exist.
     """
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
 
-    # Check if location already exists
+    # Check if an entry with this updated_at and camera_id already exists
+    cursor.execute('''
+        SELECT id FROM analytics WHERE camera_id = ? AND timestamp = ?
+    ''', (camera_id, updated_at))
+    existing_entry = cursor.fetchone()
+
+    if not existing_entry:
+        # Insert new entry if it doesn't exist
+        cursor.execute('''
+            INSERT INTO analytics (camera_id, timestamp, people_count)
+            VALUES (?, ?, ?)
+        ''', (camera_id, updated_at, people_count))
+        print(f"Added analytics data for camera {camera_id} at {updated_at}: {people_count} people.")
+    else:
+        print(f"Skipped adding analytics data for camera {camera_id} at {updated_at}: Entry already exists.")
+
+    conn.commit()
+    conn.close()
+
+
+def add_or_update_location(longitude, latitude, name):
+    """Add or update a location in the database."""
+    conn = sqlite3.connect(DB_FILE)
+    cursor = conn.cursor()
+
     cursor.execute("SELECT id FROM locations WHERE name = ?", (name,))
     location = cursor.fetchone()
 
     if location:
-        # Location exists, update it
         location_id = location[0]
         cursor.execute(
             "UPDATE locations SET longitude = ?, latitude = ? WHERE id = ?",
             (longitude, latitude, location_id),
         )
     else:
-        # Location doesn't exist, insert it
         cursor.execute(
             "INSERT INTO locations (longitude, latitude, name) VALUES (?, ?, ?)",
             (longitude, latitude, name),
@@ -100,20 +131,17 @@ def add_or_update_camera(id, description, level, people_count, image_path):
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
 
-    # Check if the camera already exists
     cursor.execute('''
         SELECT id FROM cameras WHERE id = ? AND description = ?
     ''', (id, description))
     result = cursor.fetchone()
 
     if result is None:
-        # Insert new camera
         cursor.execute('''
             INSERT INTO cameras (id, description, level, people_count, image)
             VALUES (?, ?, ?, ?, ?)
         ''', (id, description, level, people_count, image_path))
     else:
-        # Update existing camera
         cursor.execute('''
             UPDATE cameras
             SET level = ?, people_count = ?, image = ?
@@ -139,20 +167,18 @@ def process_locations():
     try:
         # Fetch locations from the API
         api_response = requests.get("https://mkt-api.gcu.edu/linecam/api/v1/locations")
-        api_response.raise_for_status()  # Raise an error for bad responses
-        locations = api_response.json()  # Parse JSON response
+        api_response.raise_for_status()
+        locations = api_response.json()
 
         if not isinstance(locations, list):
             raise ValueError("Expected a list of location names, got something else.")
 
         for location_name in locations:
-            # Ensure location_name is a string
             if not isinstance(location_name, str):
                 print(f"Skipping malformed location entry: {location_name}")
                 continue
 
-            # Check if the location already exists in the database
-            location_id = add_or_update_location(0.0, 0.0, location_name)  # Default coordinates to 0.0
+            location_id = add_or_update_location(0.0, 0.0, location_name)
 
             # Fetch cameras for the location
             cameras = fetch_camera_images(location_name)
@@ -161,17 +187,20 @@ def process_locations():
                 description = camera.get("description", "Unknown Camera")
                 id = camera.get("id", "0")
                 url = camera.get("url")
+                updated_at = camera.get("updated_at")  # Use the updated_at field from the API
+
+                if not updated_at:
+                    print(f"Skipping camera '{description}' for location '{location_name}': No updated_at timestamp.")
+                    continue
 
                 if not url:
                     print(f"Skipping camera '{description}' for location '{location_name}': No image URL.")
                     continue
 
                 try:
-                    # Step 3: Process image for detection
+                    # Fetch and process image
                     response = requests.get(url)
-                    response.raise_for_status()  # Raise an exception for HTTP errors
-
-                    # Convert the image to a NumPy array for processing
+                    response.raise_for_status()
                     image = BytesIO(response.content)
                     image_array = np.frombuffer(image.getvalue(), dtype=np.uint8)
                     image_file = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
@@ -179,25 +208,26 @@ def process_locations():
                     if image_file is None:
                         raise ValueError("Failed to decode image")
 
-                    # Save the input image
                     image_name = f"{id}_{description.replace(' ', '_')}.jpg"
                     input_image_path = os.path.join(INPUT_IMAGES_PATH, image_name)
                     cv2.imwrite(input_image_path, image_file)
 
                     # Run detection
                     people_count, annotated_image = detect(input_image_path, model, OUTPUT_IMAGES_PATH, 0.15)
-
-                    # Save annotated image
                     output_image_path = os.path.join(OUTPUT_IMAGES_PATH, image_name)
                     cv2.imwrite(output_image_path, annotated_image)
 
                     # Calculate busy level
                     busy_level = calculate_busy_level(people_count)
 
-                    # Step 4: Add or update camera in the database
+                    # Add or update camera
                     add_or_update_camera(id, description, busy_level, people_count, image_name)
 
+                    # Add analytics data
+                    add_analytics_data(id, people_count, updated_at)
+
                     print(f"Processed {description}: {people_count} people detected, {busy_level} busy level.")
+
                 except Exception as e:
                     print(f"Error processing camera {description}: {e}")
 
@@ -205,8 +235,7 @@ def process_locations():
         print(f"Error processing locations: {e}")
 
 
-# Initialize the database on startup
-initialize_database()
 
-# Process locations and cameras
+# Initialize database and process data
+initialize_database()
 process_locations()
