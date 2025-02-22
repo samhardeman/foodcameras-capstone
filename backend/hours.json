@@ -1,0 +1,1194 @@
+{
+    "locations": [
+        {
+            "id": 1,
+            "name": "Mail Center",
+            "hours": {
+                "Monday": {
+                    "open": "11:00",
+                    "close": "17:00"
+                },
+                "Tuesday": {
+                    "open": "11:00",
+                    "close": "17:00"
+                },
+                "Wednesday": {
+                    "open": "11:00",
+                    "close": "17:00"
+                },
+                "Thursday": {
+                    "open": "11:00",
+                    "close": "17:00"
+                },
+                "Friday": {
+                    "open": "11:00",
+                    "close": "17:00"
+                },
+                "Saturday": {
+                    "open": "10:00",
+                    "close": "17:00"
+                },
+                "Sunday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "name": "Rivers GCBC",
+            "hours": {
+                "Monday": {
+                    "open": "06:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "06:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "06:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "06:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "06:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "07:00",
+                    "close": "21:00"
+                },
+                "Sunday": {
+                    "open": "07:00",
+                    "close": "21:00"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Panda Express",
+            "hours": {
+                "Monday": {
+                    "open": "10:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "10:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "10:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "10:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "10:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "10:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "10:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Kaminari",
+            "hours": {
+                "Monday": {
+                    "open": "11:00",
+                    "close": "21:00"
+                },
+                "Tuesday": {
+                    "open": "11:00",
+                    "close": "21:00"
+                },
+                "Wednesday": {
+                    "open": "11:00",
+                    "close": "21:00"
+                },
+                "Thursday": {
+                    "open": "11:00",
+                    "close": "21:00"
+                },
+                "Friday": {
+                    "open": "11:00",
+                    "close": "21:00"
+                },
+                "Saturday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Sunday": {
+                    "open": "12:00",
+                    "close": "21:00"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "The Grid",
+            "hours": {
+                "Monday": {
+                    "open": "07:00",
+                    "close": "23:59"
+                },
+                "Tuesday": {
+                    "open": "07:00",
+                    "close": "23:59"
+                },
+                "Wednesday": {
+                    "open": "07:00",
+                    "close": "23:59"
+                },
+                "Thursday": {
+                    "open": "07:00",
+                    "close": "23:59"
+                },
+                "Friday": {
+                    "open": "07:00",
+                    "close": "23:59"
+                },
+                "Saturday": {
+                    "open": "08:00",
+                    "close": "23:59"
+                },
+                "Sunday": {
+                    "open": "09:00",
+                    "close": "23:59"
+                }
+            }
+        },
+        {
+            "id": 6,
+            "name": "Chaparral Lopes Mart",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "10:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 7,
+            "name": "Diamondback Chick-Fil-A",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                }
+            }
+        },
+        {
+            "id": 8,
+            "name": "Diamondback GCBC",
+            "hours": {
+                "Monday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Tuesday": {
+                    "open": "06:00",
+                    "close": "21:00"
+                },
+                "Wednesday": {
+                    "open": "06:00",
+                    "close": "21:00"
+                },
+                "Thursday": {
+                    "open": "06:00",
+                    "close": "21:00"
+                },
+                "Friday": {
+                    "open": "06:00",
+                    "close": "21:00"
+                },
+                "Saturday": {
+                    "open": "07:00",
+                    "close": "19:00"
+                },
+                "Sunday": {
+                    "open": "07:00",
+                    "close": "19:00"
+                }
+            }
+        },
+        {
+            "id": 9,
+            "name": "Arena Purple Greens",
+            "hours": {
+                "Monday": {
+                    "open": "12:30",
+                    "close": "18:00"
+                },
+                "Tuesday": {
+                    "open": "10:00",
+                    "close": "18:00"
+                },
+                "Wednesday": {
+                    "open": "10:00",
+                    "close": "18:00"
+                },
+                "Thursday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Friday": {
+                    "open": "10:00",
+                    "close": "18:00"
+                },
+                "Saturday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Sunday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                }
+            }
+        },
+        {
+            "id": 10,
+            "name": "Arena Cafe",
+            "hours": {
+                "Monday": {
+                    "open": "12:30",
+                    "close": "20:00"
+                },
+                "Tuesday": {
+                    "open": "10:00",
+                    "close": "20:00"
+                },
+                "Wednesday": {
+                    "open": "10:00",
+                    "close": "20:00"
+                },
+                "Thursday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Friday": {
+                    "open": "10:00",
+                    "close": "20:00"
+                },
+                "Saturday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Sunday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                }
+            }
+        },
+        {
+            "id": 11,
+            "name": "Juniper Lopes Mart",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "09:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 12,
+            "name": "Lopes Way Chick-Fil-A",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                }
+            }
+        },
+        {
+            "id": 13,
+            "name": "Subway",
+            "hours": {
+                "Monday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 14,
+            "name": "Pita Jungle",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Sunday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 15,
+            "name": "Roadrunner GCBC",
+            "hours": {
+                "Monday": {
+                    "open": "06:00",
+                    "close": "21:00"
+                },
+                "Tuesday": {
+                    "open": "06:00",
+                    "close": "21:00"
+                },
+                "Wednesday": {
+                    "open": "06:00",
+                    "close": "21:00"
+                },
+                "Thursday": {
+                    "open": "06:00",
+                    "close": "21:00"
+                },
+                "Friday": {
+                    "open": "06:00",
+                    "close": "21:00"
+                },
+                "Saturday": {
+                    "open": "07:00",
+                    "close": "19:00"
+                },
+                "Sunday": {
+                    "open": "07:00",
+                    "close": "19:00"
+                }
+            }
+        },
+        {
+            "id": 16,
+            "name": "Student Union GCBC",
+            "hours": {
+                "Monday": {
+                    "open": "06:00",
+                    "close": "23:00"
+                },
+                "Tuesday": {
+                    "open": "06:00",
+                    "close": "23:00"
+                },
+                "Wednesday": {
+                    "open": "06:00",
+                    "close": "23:00"
+                },
+                "Thursday": {
+                    "open": "06:00",
+                    "close": "23:00"
+                },
+                "Friday": {
+                    "open": "06:00",
+                    "close": "23:00"
+                },
+                "Saturday": {
+                    "open": "07:00",
+                    "close": "23:00"
+                },
+                "Sunday": {
+                    "open": "07:00",
+                    "close": "23:00"
+                }
+            }
+        },
+        {
+            "id": 17,
+            "name": "Einstein Bagel",
+            "hours": {
+                "Monday": {
+                    "open": "07:00",
+                    "close": "13:00"
+                },
+                "Tuesday": {
+                    "open": "07:00",
+                    "close": "13:00"
+                },
+                "Wednesday": {
+                    "open": "07:00",
+                    "close": "13:00"
+                },
+                "Thursday": {
+                    "open": "07:00",
+                    "close": "13:00"
+                },
+                "Friday": {
+                    "open": "07:00",
+                    "close": "13:00"
+                },
+                "Saturday": {
+                    "open": "07:00",
+                    "close": "13:00"
+                },
+                "Sunday": {
+                    "open": "07:00",
+                    "close": "13:00"
+                }
+            }
+        },
+        {
+            "id": 18,
+            "name": "Habit Burger",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 19,
+            "name": "Lopes Training Table",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "14:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "14:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "14:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "14:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "14:00"
+                },
+                "Saturday": {
+                    "open": "10:00",
+                    "close": "14:00"
+                },
+                "Sunday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                }
+            }
+        },
+        {
+            "id": 20,
+            "name": "Qdoba",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 21,
+            "name": "Jamba Juice",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "08:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 22,
+            "name": "Fresh Fusion",
+            "hours": {
+                "Monday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Tuesday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Wednesday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Thursday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Friday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Saturday": {
+                    "open": "11:00",
+                    "close": "17:00"
+                },
+                "Sunday": {
+                    "open": "11:00",
+                    "close": "17:00"
+                }
+            }
+        },
+        {
+            "id": 23,
+            "name": "Canyon Pizza Co.",
+            "hours": {
+                "Monday": {
+                    "open": "13:00",
+                    "close": "21:00"
+                },
+                "Tuesday": {
+                    "open": "13:00",
+                    "close": "21:00"
+                },
+                "Wednesday": {
+                    "open": "13:00",
+                    "close": "21:00"
+                },
+                "Thursday": {
+                    "open": "13:00",
+                    "close": "21:00"
+                },
+                "Friday": {
+                    "open": "13:00",
+                    "close": "21:00"
+                },
+                "Saturday": {
+                    "open": "13:00",
+                    "close": "21:00"
+                },
+                "Sunday": {
+                    "open": "13:00",
+                    "close": "21:00"
+                }
+            }
+        },
+        {
+            "id": 24,
+            "name": "Nerd Herd",
+            "hours": {
+                "Monday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Tuesday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Wednesday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Thursday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Friday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Saturday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Sunday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                }
+            }
+        },
+        {
+            "id": 25,
+            "name": "Esports Lounge",
+            "hours": {
+                "Monday": {
+                    "open": "09:00",
+                    "close": "23:59"
+                },
+                "Tuesday": {
+                    "open": "09:00",
+                    "close": "23:59"
+                },
+                "Wednesday": {
+                    "open": "09:00",
+                    "close": "23:59"
+                },
+                "Thursday": {
+                    "open": "09:00",
+                    "close": "23:59"
+                },
+                "Friday": {
+                    "open": "09:00",
+                    "close": "23:59"
+                },
+                "Saturday": {
+                    "open": "12:00",
+                    "close": "23:59"
+                },
+                "Sunday": {
+                    "open": "12:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 27,
+            "name": "Taco Bell",
+            "hours": {
+                "Monday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 28,
+            "name": "Turquoise Purple Greens",
+            "hours": {
+                "Monday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 29,
+            "name": "Panera Bread",
+            "hours": {
+                "Monday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "10:30",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 30,
+            "name": "Nectar Juice Bar",
+            "hours": {
+                "Monday": {
+                    "open": "08:00",
+                    "close": "20:00"
+                },
+                "Tuesday": {
+                    "open": "08:00",
+                    "close": "20:00"
+                },
+                "Wednesday": {
+                    "open": "08:00",
+                    "close": "20:00"
+                },
+                "Thursday": {
+                    "open": "08:00",
+                    "close": "20:00"
+                },
+                "Friday": {
+                    "open": "08:00",
+                    "close": "20:00"
+                },
+                "Saturday": {
+                    "open": "10:00",
+                    "close": "20:00"
+                },
+                "Sunday": {
+                    "open": "10:00",
+                    "close": "20:00"
+                }
+            }
+        },
+        {
+            "id": 31,
+            "name": "Jimmy Johns",
+            "hours": {
+                "Monday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "11:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 32,
+            "name": "Havoc House",
+            "hours": {
+                "Monday": {
+                    "open": "10:00",
+                    "close": "21:00"
+                },
+                "Tuesday": {
+                    "open": "10:00",
+                    "close": "21:00"
+                },
+                "Wednesday": {
+                    "open": "10:00",
+                    "close": "21:00"
+                },
+                "Thursday": {
+                    "open": "10:00",
+                    "close": "21:00"
+                },
+                "Friday": {
+                    "open": "10:00",
+                    "close": "21:00"
+                },
+                "Saturday": {
+                    "open": "10:00",
+                    "close": "21:00"
+                },
+                "Sunday": {
+                    "open": "10:00",
+                    "close": "21:00"
+                }
+            }
+        },
+        {
+            "id": 33,
+            "name": "CAC Lopes Mart",
+            "hours": {
+                "Monday": {
+                    "open": "14:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "14:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "14:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "14:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "14:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "14:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "14:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 34,
+            "name": "Sweet Disciple",
+            "hours": {
+                "Monday": {
+                    "open": "13:00",
+                    "close": "22:00"
+                },
+                "Tuesday": {
+                    "open": "13:00",
+                    "close": "22:00"
+                },
+                "Wednesday": {
+                    "open": "13:00",
+                    "close": "22:00"
+                },
+                "Thursday": {
+                    "open": "13:00",
+                    "close": "22:00"
+                },
+                "Friday": {
+                    "open": "13:00",
+                    "close": "22:00"
+                },
+                "Saturday": {
+                    "open": "13:00",
+                    "close": "22:00"
+                },
+                "Sunday": {
+                    "open": "13:00",
+                    "close": "22:00"
+                }
+            }
+        },
+        {
+            "id": 35,
+            "name": "Taco Thunder",
+            "hours": {
+                "Monday": {
+                    "open": "11:00",
+                    "close": "19:00"
+                },
+                "Tuesday": {
+                    "open": "11:00",
+                    "close": "19:00"
+                },
+                "Wednesday": {
+                    "open": "11:00",
+                    "close": "19:00"
+                },
+                "Thursday": {
+                    "open": "11:00",
+                    "close": "19:00"
+                },
+                "Friday": {
+                    "open": "11:00",
+                    "close": "19:00"
+                },
+                "Saturday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                },
+                "Sunday": {
+                    "open": "00:00",
+                    "close": "00:00"
+                }
+            }
+        },
+        {
+            "id": 36,
+            "name": "The Quad Kitchen",
+            "hours": {
+                "Monday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Tuesday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Wednesday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Thursday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Friday": {
+                    "open": "11:00",
+                    "close": "20:00"
+                },
+                "Saturday": {
+                    "open": "16:00",
+                    "close": "18:00"
+                },
+                "Sunday": {
+                    "open": "14:00",
+                    "close": "18:00"
+                }
+            }
+        }
+    ]
+}
